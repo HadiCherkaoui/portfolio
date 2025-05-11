@@ -1,6 +1,97 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 export default function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  
+  // Rate limiting constants
+  const RATE_LIMIT_MINUTES = 5;
+  const RATE_LIMIT_KEY = 'lastSubmission';
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // Reset states
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError('');
+    
+    // Check rate limit
+    const lastSubmission = localStorage.getItem(RATE_LIMIT_KEY);
+    const now = new Date().getTime();
+    
+    if (lastSubmission) {
+      const timeElapsed = now - parseInt(lastSubmission);
+      const minutesElapsed = timeElapsed / (1000 * 60);
+      
+      if (minutesElapsed < RATE_LIMIT_MINUTES) {
+        setSubmitError(`Please wait ${Math.ceil(RATE_LIMIT_MINUTES - minutesElapsed)} minutes before sending another message.`);
+        setIsSubmitting(false);
+        return;
+      }
+    }
+    
+    const formData = new FormData(e.currentTarget);
+    
+    // Create Discord message format
+    const message = {
+      embeds: [{
+        title: "New Contact Form Submission",
+        color: 3447003, // Blue color
+        fields: [
+          {
+            name: "Name",
+            value: formData.get('name') as string,
+            inline: true
+          },
+          {
+            name: "Email",
+            value: formData.get('email') as string,
+            inline: true
+          },
+          {
+            name: "Message",
+            value: formData.get('message') as string
+          }
+        ],
+        timestamp: new Date().toISOString()
+      }]
+    };
+
+    try {
+      // Get webhook URL from environment variable (passed through Next.js)
+      const webhookUrl = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL;
+      
+      if (!webhookUrl) {
+        throw new Error('Discord webhook URL not configured');
+      }
+      
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(message)
+      });
+      
+      if (response.ok) {
+        // Store submission time for rate limiting
+        localStorage.setItem(RATE_LIMIT_KEY, now.toString());
+        setSubmitSuccess(true);
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      setSubmitError('Error sending message. Please try again.');
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section id="contact" className="py-24 px-4 relative">
       {/* Background decorative elements */}
@@ -29,7 +120,7 @@ export default function ContactSection() {
             <div className="bg-[var(--card-bg)] p-8 rounded-xl shadow-lg border border-[var(--foreground)]/5 hover-lift">
               <h3 className="text-xl font-bold mb-6 text-[var(--primary-color)]">Send a Message</h3>
               
-              <form id="contactForm" className="space-y-6">
+              <form id="contactForm" className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                   <input
@@ -38,6 +129,7 @@ export default function ContactSection() {
                     name="name"
                     placeholder="John Doe"
                     required
+                    disabled={isSubmitting}
                     className="w-full px-4 py-3 bg-[var(--darker-bg)] border border-[var(--foreground)]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-colors"
                   />
                 </div>
@@ -50,6 +142,7 @@ export default function ContactSection() {
                     name="email"
                     placeholder="john@example.com"
                     required
+                    disabled={isSubmitting}
                     className="w-full px-4 py-3 bg-[var(--darker-bg)] border border-[var(--foreground)]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-colors"
                   />
                 </div>
@@ -61,16 +154,30 @@ export default function ContactSection() {
                     name="message"
                     placeholder="Your message here..."
                     required
+                    disabled={isSubmitting}
                     rows={5}
                     className="w-full px-4 py-3 bg-[var(--darker-bg)] border border-[var(--foreground)]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-colors resize-none"
                   ></textarea>
                 </div>
                 
+                {submitError && (
+                  <div className="text-red-500 text-sm p-2 bg-red-100/10 rounded-lg">
+                    {submitError}
+                  </div>
+                )}
+                
+                {submitSuccess && (
+                  <div className="text-green-500 text-sm p-2 bg-green-100/10 rounded-lg">
+                    Message sent successfully!
+                  </div>
+                )}
+                
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-medium rounded-lg transition-all duration-300 hover-lift hover:shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+                  disabled={isSubmitting}
+                  className="w-full py-3 px-6 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-medium rounded-lg transition-all duration-300 hover-lift hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>

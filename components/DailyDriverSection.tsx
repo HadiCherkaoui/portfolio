@@ -77,7 +77,7 @@ export default function DailyDriverSection() {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[var(--secondary-color)]/10 flex items-center justify-center text-[var(--secondary-color)]">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                   </span>
-                  <span>i3 Window Manager for keyboard-driven productivity</span>
+                  <span>Customized Arch using kde plasma with kvantum</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[var(--secondary-color)]/10 flex items-center justify-center text-[var(--secondary-color)]">
