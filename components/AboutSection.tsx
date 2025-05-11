@@ -48,11 +48,11 @@ export default function AboutSection() {
             
             <div className="space-y-4 text-[var(--foreground)]/80">
               <p className="text-lg leading-relaxed">
-                I'm a <span className="font-semibold text-[var(--foreground)]">16-year-old Platform Developer apprentice</span> based in Switzerland, passionate about technology and open source. I love working with <span className="text-[var(--primary-color)]">Kubernetes</span>, automation, and managing my home lab setup (Proxmox with Kubernetes).
+                I&apos;m a <span className="font-semibold text-[var(--foreground)]">16-year-old Platform Developer apprentice</span> based in Switzerland, passionate about technology and open source. I love working with <span className="text-[var(--primary-color)]">Kubernetes</span>, automation, and managing my home lab setup (Proxmox with Kubernetes).
               </p>
               
               <p className="text-lg leading-relaxed">
-                For me, IT isn't just a career choice - it's something I truly enjoy. Whether I'm writing PowerShell scripts, working with Docker containers, or exploring new technologies, I'm always excited to learn and create. My enthusiasm for Linux and open-source technologies drives me to continuously expand my knowledge.
+                For me, IT isn&apos;t just a career choice - it&apos;s something I truly enjoy. Whether I&apos;m writing PowerShell scripts, working with Docker containers, or exploring new technologies, I&apos;m always excited to learn and create. My enthusiasm for Linux and open-source technologies drives me to continuously expand my knowledge.
               </p>
             </div>
             

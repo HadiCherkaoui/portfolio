@@ -46,7 +46,7 @@ export default function ProjectsSection() {
           </h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-[var(--foreground)]/80 max-w-2xl mx-auto">
-            Here are some of my recent projects. I'm passionate about building tools that solve real problems and contribute to the open-source community.
+            Here are some of my recent projects. I&apos;m passionate about building tools that solve real problems and contribute to the open-source community.
           </p>
         </div>
         

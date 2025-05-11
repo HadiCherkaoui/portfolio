@@ -110,7 +110,7 @@ export default function ContactSection() {
           </h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-[var(--foreground)]/80 max-w-2xl mx-auto">
-            Interested in collaboration? Let's connect! Feel free to reach out if you have any questions or would like to work together on a project.
+            Interested in collaboration? Let&apos;s connect! Feel free to reach out if you have any questions or would like to work together on a project.
           </p>
         </div>
         

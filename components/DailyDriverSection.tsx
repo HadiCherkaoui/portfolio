@@ -61,11 +61,11 @@ export default function DailyDriverSection() {
               </p>
               
               <p className="text-lg leading-relaxed">
-                Arch Linux offers me complete control over my computing environment, allowing me to build a minimal, efficient system tailored to my specific needs. The rolling release model ensures I'm always running the latest software without major version upgrades.
+                Arch Linux offers me complete control over my computing environment, allowing me to build a minimal, efficient system tailored to my specific needs. The rolling release model ensures I&apos;m always running the latest software without major version upgrades.
               </p>
               
               <p className="text-lg leading-relaxed">
-                The journey wasn't without challenges, but the process taught me valuable skills in system administration, troubleshooting, and the Linux ecosystem. Now I enjoy a lightweight, secure, and highly customized desktop that perfectly suits my workflow.
+                The journey wasn&apos;t without challenges, but the process taught me valuable skills in system administration, troubleshooting, and the Linux ecosystem. Now I enjoy a lightweight, secure, and highly customized desktop that perfectly suits my workflow.
               </p>
             </div>
             

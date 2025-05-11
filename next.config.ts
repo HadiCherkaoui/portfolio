@@ -2,11 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  // This enables Docker compatibility
-  experimental: {
-    // Enable if you're using app directory
-    serverComponentsExternalPackages: [],
-  },
+  // This enables Docker compatibility for standalone output
 };
 
 export default nextConfig;

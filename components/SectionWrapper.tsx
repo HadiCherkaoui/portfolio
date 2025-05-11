@@ -47,9 +47,12 @@ export default function SectionWrapper({
       observer.observe(sectionRef.current);
     }
 
+    // Capture the current value of the ref for cleanup
+    const currentRef = sectionRef.current;
+    
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

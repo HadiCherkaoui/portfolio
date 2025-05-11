@@ -1,24 +1,23 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function HeroSection() {
-  // Skills array for typing animation
-  const skills = [
-    'Kubernetes',
-    'Linux Enthusiast',
-    'Platform Developer',
-    'Open Source Contributor',
-    'Tech Explorer',
-    'Docker Expert'
-  ];
-  
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(100);
   
   useEffect(() => {
+    // Skills array for typing animation
+    const skills = [
+      'Kubernetes',
+      'Linux Enthusiast',
+      'Platform Developer',
+      'Open Source Contributor',
+      'Tech Explorer',
+      'Docker Expert'
+    ];
     const typingAnimation = () => {
       const currentSkill = skills[currentIndex];
       const shouldDelete = isDeleting;
@@ -49,7 +48,7 @@ export default function HeroSection() {
     
     const timer = setTimeout(typingAnimation, typingSpeed);
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, currentIndex, skills, typingSpeed]);
+  }, [displayText, isDeleting, currentIndex, typingSpeed]);
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-center items-center py-20 px-4 relative overflow-hidden">
       {/* Particles background effect will be added with JavaScript */}

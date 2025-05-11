@@ -82,7 +82,7 @@ export default function HobbiesSection() {
         {/* Additional info */}
         <div className="mt-16 text-center">
           <p className="text-lg text-[var(--foreground)]/80 max-w-2xl mx-auto">
-            When I'm not coding or working with technology, I enjoy these activities that help me maintain a balanced lifestyle and bring fresh perspectives to my technical work.
+            When I&apos;m not coding or working with technology, I enjoy these activities that help me maintain a balanced lifestyle and bring fresh perspectives to my technical work.
           </p>
           <a 
             href="https://docs.cherkaoui.ch/skills/" 
