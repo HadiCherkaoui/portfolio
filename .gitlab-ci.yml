@@ -18,4 +18,5 @@ build:
     - docker build -t "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}" -f Dockerfile.prod .
     - docker push "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}"
   only:
-      - manual
+    - main
+    - manual
