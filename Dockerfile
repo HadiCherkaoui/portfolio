@@ -10,6 +10,10 @@ WORKDIR /app
 # Build stage
 FROM base AS builder
 
+# Accept build argument for Discord webhook URL
+ARG DISCORD_WEBHOOK_URL
+ENV NEXT_PUBLIC_DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+
 # Copy package files
 COPY package.json pnpm-lock.yaml ./
 
@@ -27,8 +31,6 @@ FROM base AS runner
 
 # Set environment variables
 ENV NODE_ENV=production
-ARG DISCORD_WEBHOOK_URL
-ENV NEXT_PUBLIC_DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
 
 # Create a non-root user
 RUN addgroup --system --gid 1001 nodejs \
