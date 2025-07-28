@@ -50,7 +50,7 @@ export default function AutomationSection() {
     <section id="automation" className="py-24 px-4 relative">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-40 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none"></div>
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.08),transparent_70%)] pointer-events-none"></div>
       </div>
       
       <div className="container mx-auto max-w-6xl relative z-10">

@@ -153,15 +153,13 @@ export default function ServicesSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://cherkaoui.ch" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href="#contact" 
               className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg hover:bg-[var(--primary-color)]/90 transition-colors hover-lift"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2v-2M3 4h6l4 4v8a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
               </svg>
-              Visit Forum
+              Contact Forum
             </a>
             <a 
               href="mailto:contact@hide.cherkaoui.ch" 
