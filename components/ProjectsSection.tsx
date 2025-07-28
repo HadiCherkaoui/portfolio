@@ -6,7 +6,7 @@ export default function ProjectsSection() {
       title: 'Quillium - Open Source AI Search',
       description: 'Self-hostable alternative to Perplexity with Go backend and Next.js frontend',
       tags: ['Go', 'Next.js', 'AI'],
-      link: 'https://github.com/hadicherkaoui/quillium'
+      link: 'https://gitlab.cherkaoui.ch/quillium-ai'
     },
     {
       title: 'Home Kubernetes Cluster',
@@ -15,17 +15,17 @@ export default function ProjectsSection() {
       link: 'https://docs.cherkaoui.ch/homelab'
     },
     {
-      title: 'Personal Tech Blog',
-      description: 'Sharing my experiences with Linux, self-hosting, and open-source',
-      tags: ['Ghost', 'Markdown', 'Technical Writing'],
-      link: 'https://blog.cherkaoui.ch'
+      title: 'Automated Life with n8n & GitLab',
+      description: 'Complete automation setup using self-hosted GitLab CI/CD and n8n workflows for daily tasks',
+      tags: ['n8n', 'GitLab', 'Automation', 'Self-hosted'],
+      link: 'https://gitlab.cherkaoui.ch/HadiCherkaoui'
     }
   ];
 
   const highlights = [
     'Built a self-hostable AI search engine alternative',
     'Designed and deployed a production-grade Kubernetes cluster at home',
-    'Created documentation and blog posts to share knowledge with the community'
+    'Automated daily workflows using self-hosted GitLab and n8n for complete life automation'
   ];
 
   return (
@@ -110,7 +110,7 @@ export default function ProjectsSection() {
                 </p>
                 
                 <a 
-                  href="https://github.com/hadicherkaoui" 
+                  href="https://gitlab.cherkaoui.ch/HadiCherkaoui" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg hover:bg-[var(--primary-color)]/90 transition-colors hover-lift"
@@ -137,7 +137,7 @@ export default function ProjectsSection() {
                 <div className="mt-8 pt-6 border-t border-[var(--foreground)]/10">
                   <h4 className="font-medium mb-3">Technologies I frequently use:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Kubernetes', 'Docker', 'Go', 'TypeScript', 'React', 'Next.js', 'Linux'].map((tech, index) => (
+                    {['Kubernetes', 'Docker', 'Go', 'TypeScript', 'React', 'Next.js', 'n8n', 'GitLab'].map((tech, index) => (
                       <span 
                         key={index} 
                         className="px-3 py-1 bg-[var(--primary-color)]/5 text-[var(--primary-color)]/90 rounded-full text-xs font-medium"

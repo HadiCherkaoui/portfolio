@@ -1,24 +1,22 @@
-image: docker:latest
-
-services:
-  - name: docker:dind
-    command: ["--host=tcp://0.0.0.0:2375", "--host=unix:///var/run/docker.sock"]
-
-
 stages:
   - build
-  - deploy
 
 variables:
-  DOCKER_HOST: tcp://docker:2376
-  DOCKER_TLS_CERTDIR: "/certs"
+  IMAGE_TAG: "latest"
+  DOCKER_HOST: tcp://docker:2375
+
+services:
+  - name: docker:24.0.5-dind
+    alias: docker
+    command: ["dockerd", "--host=tcp://0.0.0.0:2375", "--host=unix:///var/run/docker.sock", "--tls=false"]
 
 build:
   stage: build
+  image: docker:24.0.5
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
   script:
-    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
-    - docker build -t "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}" -f Dockerfile.prod .
-    - docker push "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}"
+    - docker build -t $CI_REGISTRY_IMAGE:$IMAGE_TAG .
+    - docker push $CI_REGISTRY_IMAGE:$IMAGE_TAG
   only:
     - main
-    - manual
