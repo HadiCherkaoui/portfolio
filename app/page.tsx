@@ -6,6 +6,7 @@ import DailyDriverSection from '../components/DailyDriverSection';
 import SkillsSection from '../components/SkillsSection';
 import HobbiesSection from '../components/HobbiesSection';
 import AutomationSection from '../components/AutomationSection';
+import HomelabSection from '../components/HomelabSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ServicesSection from '../components/ServicesSection';
 import ContactSection from '../components/ContactSection';
@@ -55,6 +56,10 @@ export default function Home() {
       
       <SectionWrapper>
         <AutomationSection />
+      </SectionWrapper>
+      
+      <SectionWrapper>
+        <HomelabSection />
       </SectionWrapper>
       
       <SectionWrapper>

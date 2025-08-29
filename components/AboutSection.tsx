@@ -54,13 +54,17 @@ export default function AboutSection() {
               <p className="text-lg leading-relaxed">
                 For me, IT isn&apos;t just a career choice - it&apos;s something I truly enjoy. Whether I&apos;m writing PowerShell scripts, working with Docker containers, or exploring new technologies, I&apos;m always excited to learn and create. My enthusiasm for Linux and open-source technologies drives me to continuously expand my knowledge.
               </p>
+              
+              <p className="text-lg leading-relaxed">
+                I&apos;m actively learning <span className="text-[var(--primary-color)]">ethical hacking</span> and cybersecurity through hands-on practice on <a href="https://tryhackme.com/p/HadiCherkaoui" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-color)] hover:text-[var(--secondary-color)] transition-colors font-semibold">TryHackMe</a>, where I tackle real-world security challenges and develop penetration testing skills.
+              </p>
             </div>
             
             {/* Skills tags */}
             <div className="mt-8 mb-10">
               <h4 className="text-lg font-semibold mb-4">My Focus Areas:</h4>
               <div className="flex flex-wrap gap-2">
-                {['Kubernetes', 'Docker', 'Linux', 'Automation', 'Cloud Native', 'CI/CD', 'Home Lab', 'Open Source'].map((skill) => (
+                {['Kubernetes', 'Docker', 'Linux', 'Automation', 'Cloud Native', 'CI/CD', 'Home Lab', 'Open Source', 'Ethical Hacking'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 bg-[var(--card-bg)] text-sm font-medium rounded-full border border-[var(--foreground)]/10 hover:border-[var(--primary-color)]/50 transition-colors">
                     {skill}
                   </span>
@@ -85,7 +89,7 @@ export default function AboutSection() {
                 rel="noopener noreferrer" 
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--card-bg)] rounded-lg hover:bg-[var(--primary-color)]/10 hover:text-[var(--primary-color)] border border-[var(--foreground)]/10 hover:border-[var(--primary-color)]/50 transition-all hover-lift"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L8.5 9.5h7L12 0zM1.5 9.5L12 24l-7-4.5L1.5 9.5zM22.5 9.5L19 19.5 12 24l10.5-14.5zM8.5 9.5L5 19.5 12 24 8.5 9.5zM15.5 9.5L19 19.5 12 24l3.5-14.5z"/></svg>
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.955 13.587l-1.342-4.135-2.664-8.189c-.135-.423-.73-.423-.867 0L16.418 9.45H7.582L4.918 1.263c-.135-.423-.73-.423-.867 0L1.387 9.452.045 13.587c-.121.375.014.789.331 1.023L12 23.054l11.624-8.443c.318-.235.452-.648.331-1.024"/></svg>
                 GitLab Projects
               </a>
               <a 

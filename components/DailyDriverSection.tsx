@@ -111,7 +111,7 @@ export default function DailyDriverSection() {
                 rel="noopener noreferrer" 
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--card-bg)] rounded-lg hover:bg-[var(--secondary-color)]/10 hover:text-[var(--secondary-color)] border border-[var(--foreground)]/10 hover:border-[var(--secondary-color)]/50 transition-all hover-lift"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L8.5 9.5h7L12 0zM1.5 9.5L12 24l-7-4.5L1.5 9.5zM22.5 9.5L19 19.5 12 24l10.5-14.5zM8.5 9.5L5 19.5 12 24 8.5 9.5zM15.5 9.5L19 19.5 12 24l3.5-14.5z"/></svg>
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.955 13.587l-1.342-4.135-2.664-8.189c-.135-.423-.73-.423-.867 0L16.418 9.45H7.582L4.918 1.263c-.135-.423-.73-.423-.867 0L1.387 9.452.045 13.587c-.121.375.014.789.331 1.023L12 23.054l11.624-8.443c.318-.235.452-.648.331-1.024"/></svg>
                 GitLab Projects
               </a>
               <a 

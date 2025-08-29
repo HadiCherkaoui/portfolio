@@ -37,6 +37,12 @@ export default function HobbiesSection() {
       description: 'Contributing to projects',
       icon: <><path d="M6 3v12"></path><path d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path><path d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path><path d="M15 6a9 9 0 0 0-9 9"></path><path d="M18 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path><path d="M9 6a9 9 0 0 1 9 9"></path></>,
       color: 'secondary'
+    },
+    {
+      title: 'Ethical Hacking',
+      description: 'Learning cybersecurity through TryHackMe',
+      icon: <><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M21 12a9 9 0 1 1-18 0m9-10v10"></path></>,
+      color: 'primary'
     }
   ];
 
