@@ -122,7 +122,7 @@ export default function AutomationSection() {
                       </a>
                       {('oldLink' in feature) && (
                         <a 
-                          href={(feature as any).oldLink}
+                          href={(feature as { oldLink: string }).oldLink}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 text-[var(--foreground)]/60 hover:text-[var(--foreground)]/80 transition-colors font-medium ml-4 text-sm"
