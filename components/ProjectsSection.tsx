@@ -3,15 +3,15 @@ import React from 'react';
 export default function ProjectsSection() {
   const projects = [
     {
-      title: 'Quillium - Open Source AI Search',
-      description: 'Self-hostable alternative to Perplexity with Go backend and Next.js frontend',
-      tags: ['Go', 'Next.js', 'AI'],
-      link: 'https://gitlab.cherkaoui.ch/quillium-ai'
+      title: 'Scolx - Student Platform SaaS',
+      description: 'Modern SaaS platform for students built with Go backend and Next.js frontend, leveraging AI features and PostgreSQL',
+      tags: ['Go', 'Next.js', 'AI', 'PostgreSQL'],
+      link: 'https://scolx.com'
     },
     {
       title: 'Home Kubernetes Cluster',
       description: 'Production-grade enterprise Kubernetes cluster for media, backups, and self-hosted services',
-      tags: ['Kubernetes', 'Proxmox', 'OpenTofu'],
+      tags: ['Kubernetes', 'Proxmox', 'FluxCD'],
       link: 'https://docs.cherkaoui.ch/homelab'
     },
     {

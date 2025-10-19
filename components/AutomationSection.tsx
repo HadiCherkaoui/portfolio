@@ -25,15 +25,16 @@ export default function AutomationSection() {
       link: 'https://gitlab.cherkaoui.ch/HadiCherkaoui'
     },
     {
-      title: 'Infrastructure as Code',
-      description: 'Automated infrastructure deployment and management using modern DevOps practices',
+      title: 'FluxCD GitOps',
+      description: 'GitOps-driven infrastructure with FluxCD managing Kubernetes and application deployments',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       ),
-      features: ['Terraform/OpenTofu', 'Kubernetes manifests', 'Ansible playbooks', 'GitOps workflows'],
-      link: 'https://gitlab.cherkaoui.ch/HadiCherkaoui/homelab-k8s'
+      features: ['FluxCD', 'Kubernetes manifests', 'GitOps workflows'],
+      link: 'https://gitlab.cherkaoui.ch/HadiCherkaoui/homelab-k8s-fluxcd',
+      oldLink: 'https://gitlab.cherkaoui.ch/HadiCherkaoui/homelab-k8s'
     }
   ];
 
@@ -119,6 +120,19 @@ export default function AutomationSection() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                       </a>
+                      {('oldLink' in feature) && (
+                        <a 
+                          href={(feature as any).oldLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[var(--foreground)]/60 hover:text-[var(--foreground)]/80 transition-colors font-medium ml-4 text-sm"
+                        >
+                          <span>Old repo (OpenTofu)</span>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                          </svg>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -162,7 +176,7 @@ export default function AutomationSection() {
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {['GitLab CI/CD', 'n8n Workflows', 'Kubernetes', 'Proxmox', 'Ansible'].map((tech, index) => (
+                    {['GitLab CI/CD', 'n8n Workflows', 'Kubernetes', 'Proxmox', 'FluxCD'].map((tech, index) => (
                       <span 
                         key={index} 
                         className="px-3 py-1 bg-[var(--primary-color)]/5 text-[var(--primary-color)]/90 rounded-full text-xs font-medium"

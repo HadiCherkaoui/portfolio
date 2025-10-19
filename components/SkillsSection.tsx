@@ -97,10 +97,10 @@ export default function SkillsSection() {
               <div>
                 <div className="flex justify-between mb-1">
                   <span className="font-medium">Kubernetes & Docker</span>
-                  <span className="text-[var(--primary-color)]">90%</span>
+                  <span className="text-[var(--primary-color)]">100%</span>
                 </div>
                 <div className="w-full bg-[var(--card-bg)] rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2.5 rounded-full" style={{ width: '90%' }}></div>
+                  <div className="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2.5 rounded-full" style={{ width: '100%' }}></div>
                 </div>
               </div>
               
@@ -133,13 +133,33 @@ export default function SkillsSection() {
                   <div className="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2.5 rounded-full" style={{ width: '75%' }}></div>
                 </div>
               </div>
+
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">Backend Developing</span>
+                  <span className="text-[var(--primary-color)]">80%</span>
+                </div>
+                <div className="w-full bg-[var(--card-bg)] rounded-full h-2.5">
+                  <div className="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2.5 rounded-full" style={{ width: '80%' }}></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">Ethical Hacking</span>
+                  <span className="text-[var(--primary-color)]">30%</span>
+                </div>
+                <div className="w-full bg-[var(--card-bg)] rounded-full h-2.5">
+                  <div className="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2.5 rounded-full" style={{ width: '30%' }}></div>
+                </div>
+              </div>
             </div>
             
             {/* Skill tags */}
             <div className="flex flex-wrap gap-2">
               {[
-                'Kubernetes', 'Docker', 'Linux', 'AWS', 'Azure', 'Terraform',
-                'PowerShell', 'Python', 'JavaScript', 'TypeScript', 'React', 'Next.js',
+                'Kubernetes', 'Docker', 'Linux', 'AWS', 'Azure', 'Terraform', 'FluxCD',
+                'PowerShell', 'Python', 'JavaScript', 'TypeScript', 'Go', 'React', 'Next.js',
                 'CI/CD', 'Git', 'Proxmox', 'Networking'
               ].map((tag, index) => (
                 <span 
