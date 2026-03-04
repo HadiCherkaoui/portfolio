@@ -89,6 +89,18 @@ export default function AboutSection() {
               </p>
             </div>
 
+            {/* Achievement badge */}
+            <div className="mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--accent-emerald)]/10 border border-[var(--accent-emerald)]/30">
+                <svg className="w-4 h-4 text-[var(--accent-emerald)]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <span className="text-sm font-medium text-[var(--accent-emerald)]">
+                  ICT Championships Switzerland — Cloud & Cybersecurity
+                </span>
+              </div>
+            </div>
+
             {/* Skills tags */}
             <div className="mt-8 mb-10">
               <h4 className="text-lg font-medium mb-4 text-[var(--text-primary)]">

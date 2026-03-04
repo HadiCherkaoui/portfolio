@@ -14,7 +14,7 @@ export default function HobbiesSection() {
   ];
 
   const getIcon = (iconName: string) => {
-    const icons: Record<string, JSX.Element> = {
+    const icons: Record<string, React.JSX.Element> = {
       gamepad: (
         <>
           <rect x="2" y="6" width="20" height="12" rx="2" />
@@ -60,7 +60,7 @@ export default function HobbiesSection() {
       ),
       "git-branch": (
         <>
-          <line x1="6" y1="3" x2="6" y1="15" />
+          <line x1="6" y1="3" x2="6" y2="15" />
           <circle cx="18" cy="6" r="3" />
           <circle cx="6" cy="18" r="3" />
           <path d="M18 9a9 9 0 0 1-9 9" />
@@ -150,7 +150,7 @@ function HobbyCard({
 }: {
   title: string;
   description: string;
-  icon: JSX.Element;
+  icon: React.JSX.Element;
   delay: number;
 }) {
   const { ref, spotlightProps } = useSpotlight<HTMLDivElement>();
