@@ -40,10 +40,12 @@
   --accent-amber-dim: rgba(232, 133, 42, 0.6);
   --accent-amber-subtle: rgba(232, 133, 42, 0.12);
   --accent-amber-border: rgba(232, 133, 42, 0.25);
+  --accent-amber-warm: #f59e0b;
   --accent-purple: #a78bfa;
   --accent-purple-dim: rgba(167, 139, 250, 0.6);
   --accent-purple-subtle: rgba(167, 139, 250, 0.1);
   --accent-purple-border: rgba(167, 139, 250, 0.2);
+  --accent-purple-light: #c4b5fd;
 }
 
 /* Theme variables for Next.js */
@@ -249,7 +251,7 @@ body {
 
 /* Italic emerald accent for headlines */
 .emerald-accent {
-  background: linear-gradient(135deg, #E8852A 0%, #f59e0b 100%);
+  background: linear-gradient(135deg, var(--accent-amber) 0%, var(--accent-amber-warm) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -258,7 +260,7 @@ body {
 
 /* Amber accent text */
 .amber-accent {
-  background: linear-gradient(135deg, #E8852A 0%, #f59e0b 100%);
+  background: linear-gradient(135deg, var(--accent-amber) 0%, var(--accent-amber-warm) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -266,7 +268,7 @@ body {
 
 /* Purple accent text */
 .purple-accent {
-  background: linear-gradient(135deg, #a78bfa 0%, #c4b5fd 100%);
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-purple-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
