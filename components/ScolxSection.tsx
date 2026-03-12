@@ -8,8 +8,8 @@ export default function ScolxSection() {
   const { ref, spotlightProps } = useSpotlight<HTMLDivElement>();
 
   return (
-    <SectionWrapper>
-      <section id="scolx" className="py-24 px-4 relative">
+    <SectionWrapper id="scolx">
+      <div className="py-24 px-4 relative">
         <div className="container mx-auto max-w-4xl relative z-10">
 
           {/* Claim header */}
@@ -29,8 +29,8 @@ export default function ScolxSection() {
           {/* Proof card */}
           <div
             ref={ref}
-            {...spotlightProps}
-            className="glass-card p-8 md:p-10"
+            onMouseMove={spotlightProps.onMouseMove}
+            className="glass-card spotlight-card p-8 md:p-10"
           >
             <div className="flex flex-col md:flex-row gap-8 md:gap-12">
               {/* Description */}
@@ -96,7 +96,7 @@ export default function ScolxSection() {
           </div>
 
         </div>
-      </section>
+      </div>
     </SectionWrapper>
   );
 }
