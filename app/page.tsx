@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ScolxSection from "@/components/ScolxSection";
+import LockboxSection from "@/components/LockboxSection";
 import InfraSection from "@/components/InfraSection";
 import ToolsSection from "@/components/ToolsSection";
 import CompetitionSection from "@/components/CompetitionSection";
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <ScolxSection />
+      <LockboxSection />
       <InfraSection />
       <ToolsSection />
       <CompetitionSection />
