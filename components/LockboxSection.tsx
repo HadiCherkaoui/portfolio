@@ -68,7 +68,7 @@ export default function LockboxSection() {
                     className="inline-flex items-center gap-2 text-(--accent-purple) hover:text-(--text-primary) transition-colors font-medium"
                   >
                     <span>Lockbox on GitLab</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </a>
@@ -79,7 +79,7 @@ export default function LockboxSection() {
                     className="inline-flex items-center gap-2 text-(--accent-purple) hover:text-(--text-primary) transition-colors font-medium"
                   >
                     <span>Controller on GitLab</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </a>
