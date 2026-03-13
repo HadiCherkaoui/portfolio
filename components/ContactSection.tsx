@@ -105,15 +105,15 @@ export default function ContactSection() {
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="font-tech text-[var(--accent-emerald)] mb-4 block">
+          <span className="font-tech text-(--accent-emerald) mb-4 block">
             Contact Me
           </span>
           <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl mb-6">
             Get in{" "}
             <span className="emerald-accent">Touch</span>
           </h2>
-          <div className="w-20 h-0.5 bg-[var(--accent-emerald)] mx-auto mb-6" />
-          <p className="mt-6 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+          <div className="w-20 h-0.5 bg-(--accent-emerald) mx-auto mb-6" />
+          <p className="mt-6 text-lg text-(--text-secondary) max-w-2xl mx-auto">
             If you want to work together, talk about Rust, or ask about the
             homelab — reach out.
           </p>
@@ -127,7 +127,7 @@ export default function ContactSection() {
               onMouseMove={formSpotlight.onMouseMove}
               className="glass-card spotlight-card p-8 hover-lift"
             >
-              <h3 className="font-headline text-xl mb-6 text-[var(--accent-emerald)]">
+              <h3 className="font-headline text-xl mb-6 text-(--accent-emerald)">
                 Send a Message
               </h3>
 
@@ -135,7 +135,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium mb-2 text-[var(--text-secondary)]"
+                    className="block text-sm font-medium mb-2 text-(--text-secondary)"
                   >
                     Your Name
                   </label>
@@ -146,14 +146,14 @@ export default function ContactSection() {
                     placeholder="John Doe"
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-[var(--darker-bg)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-[var(--accent-emerald)] transition-colors"
+                    className="w-full px-4 py-3 bg-(--darker-bg) border border-(--border-subtle) rounded-lg focus:outline-none focus:border-(--accent-emerald) transition-colors"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium mb-2 text-[var(--text-secondary)]"
+                    className="block text-sm font-medium mb-2 text-(--text-secondary)"
                   >
                     Your Email
                   </label>
@@ -164,14 +164,14 @@ export default function ContactSection() {
                     placeholder="john@example.com"
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-[var(--darker-bg)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-[var(--accent-emerald)] transition-colors"
+                    className="w-full px-4 py-3 bg-(--darker-bg) border border-(--border-subtle) rounded-lg focus:outline-none focus:border-(--accent-emerald) transition-colors"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium mb-2 text-[var(--text-secondary)]"
+                    className="block text-sm font-medium mb-2 text-(--text-secondary)"
                   >
                     Message
                   </label>
@@ -182,7 +182,7 @@ export default function ContactSection() {
                     required
                     disabled={isSubmitting}
                     rows={5}
-                    className="w-full px-4 py-3 bg-[var(--darker-bg)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-[var(--accent-emerald)] transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-(--darker-bg) border border-(--border-subtle) rounded-lg focus:outline-none focus:border-(--accent-emerald) transition-colors resize-none"
                   ></textarea>
                 </div>
 
@@ -212,7 +212,7 @@ export default function ContactSection() {
           {/* Contact info */}
           <div className="md:w-1/2 order-1 md:order-2">
             <div className="glass-card p-6">
-              <h3 className="font-headline text-xl mb-6 text-[var(--text-primary)]">
+              <h3 className="font-headline text-xl mb-6 text-(--text-primary)">
                 Find me here
               </h3>
               <div>
@@ -258,12 +258,12 @@ export default function ContactSection() {
                     href={item.href}
                     target={item.href.startsWith("mailto") ? undefined : "_blank"}
                     rel={item.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                    className="flex items-center justify-between py-3 border-b border-[var(--border-subtle)] last:border-0 group"
+                    className="flex items-center justify-between py-3 border-b border-(--border-subtle) last:border-0 group"
                   >
-                    <span className="text-sm text-[var(--text-muted)] font-tech uppercase tracking-wider">
+                    <span className="text-sm text-(--text-muted) font-tech uppercase tracking-wider">
                       {item.label}
                     </span>
-                    <span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--accent-amber)] transition-colors">
+                    <span className="text-sm text-(--text-secondary) group-hover:text-[var(--accent-amber)] transition-colors">
                       {item.value}
                     </span>
                   </a>
@@ -273,15 +273,15 @@ export default function ContactSection() {
 
             {/* Location */}
             <div className="mt-6 glass-card p-5 flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-[var(--accent-emerald-subtle)] flex items-center justify-center text-[var(--accent-emerald)] shrink-0">
+              <div className="w-10 h-10 rounded-full bg-(--accent-emerald-subtle) flex items-center justify-center text-(--accent-emerald) shrink-0">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-medium text-[var(--text-primary)]">Location</p>
-                <p className="text-sm text-[var(--text-secondary)]">Zurich, Switzerland</p>
+                <p className="text-sm font-medium text-(--text-primary)">Location</p>
+                <p className="text-sm text-(--text-secondary)">Zurich, Switzerland</p>
               </div>
             </div>
           </div>

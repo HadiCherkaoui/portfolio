@@ -55,7 +55,7 @@ export default function ScolxSection() {
                   href="https://scolx.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-(--accent-amber) hover:text-(--text-primary) transition-colors font-medium"
+                  className="mt-6 inline-flex items-center gap-2 text-(--accent-amber) hover:text-[var(--text-primary)] transition-colors font-medium"
                 >
                   <span>scolx.com</span>
                   <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

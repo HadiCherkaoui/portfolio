@@ -37,7 +37,7 @@ export default function ToolsSection() {
                 href="https://docs.cherkaoui.ch/setup/os-setup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1 text-sm text-(--accent-amber) hover:text-(--text-primary) transition-colors"
+                className="mt-5 inline-flex items-center gap-1 text-sm text-(--accent-amber) hover:text-[var(--text-primary)] transition-colors"
               >
                 Setup documentation
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ export default function ToolsSection() {
                 href="https://github.com/HadiCherkaoui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1 text-sm text-(--accent-amber) hover:text-(--text-primary) transition-colors"
+                className="mt-5 inline-flex items-center gap-1 text-sm text-(--accent-amber) hover:text-[var(--text-primary)] transition-colors"
               >
                 GitHub
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

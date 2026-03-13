@@ -51,7 +51,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
+            className="text-(--text-muted) hover:text-[var(--accent-amber)] transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitLab"
-            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
+            className="text-(--text-muted) hover:text-[var(--accent-amber)] transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Documentation"
-            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
+            className="text-(--text-muted) hover:text-[var(--accent-amber)] transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ export default function HeroSection() {
           <a
             href="mailto:contact@hadi.cherkaoui.ch"
             aria-label="Email"
-            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
+            className="text-(--text-muted) hover:text-[var(--accent-amber)] transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TryHackMe"
-            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
+            className="text-(--text-muted) hover:text-[var(--accent-amber)] transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">

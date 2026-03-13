@@ -65,7 +65,7 @@ export default function LockboxSection() {
                     href="https://gitlab.cherkaoui.ch/HadiCherkaoui/lockbox"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-(--accent-purple) hover:text-(--text-primary) transition-colors font-medium"
+                    className="inline-flex items-center gap-2 text-(--accent-purple) hover:text-[var(--text-primary)] transition-colors font-medium"
                   >
                     <span>Lockbox on GitLab</span>
                     <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export default function LockboxSection() {
                     href="https://gitlab.cherkaoui.ch/HadiCherkaoui/lockbox-k8s-controller"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-(--accent-purple) hover:text-(--text-primary) transition-colors font-medium"
+                    className="inline-flex items-center gap-2 text-(--accent-purple) hover:text-[var(--text-primary)] transition-colors font-medium"
                   >
                     <span>Controller on GitLab</span>
                     <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
