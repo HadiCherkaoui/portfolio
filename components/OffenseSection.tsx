@@ -9,7 +9,7 @@ export default function OffenseSection() {
           {/* Claim header — purple */}
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-[var(--accent-purple)]" />
+              <div className="h-px w-12 bg-(--accent-purple)" />
               <span
                 className="font-tech text-xs tracking-widest uppercase"
                 style={{ color: "var(--accent-purple)" }}
@@ -25,7 +25,7 @@ export default function OffenseSection() {
 
           {/* Proof */}
           <div className="glass-card p-8 max-w-2xl">
-            <p className="text-[var(--text-secondary)] text-lg leading-relaxed mb-6">
+            <p className="text-(--text-secondary) text-lg leading-relaxed mb-6">
               I&apos;m working through TryHackMe&apos;s ethical hacking path —
               hands-on labs covering penetration testing, network exploitation,
               and security tooling. You don&apos;t really understand how to

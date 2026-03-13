@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import SectionWrapper from "./SectionWrapper";
 import useSpotlight from "../hooks/useSpotlight";
 
@@ -15,8 +14,8 @@ export default function ScolxSection() {
           {/* Claim header */}
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-[var(--accent-amber)]" />
-              <span className="font-tech text-[var(--accent-amber)] text-xs tracking-widest uppercase">
+              <div className="h-px w-12 bg-(--accent-amber)" />
+              <span className="font-tech text-(--accent-amber) text-xs tracking-widest uppercase">
                 Builds
               </span>
             </div>
@@ -35,14 +34,14 @@ export default function ScolxSection() {
             <div className="flex flex-col md:flex-row gap-8 md:gap-12">
               {/* Description */}
               <div className="md:w-3/5">
-                <h3 className="text-2xl font-semibold mb-4 text-[var(--text-primary)]">
+                <h3 className="text-2xl font-semibold mb-4 text-(--text-primary)">
                   Scolx
                 </h3>
-                <div className="space-y-4 text-[var(--text-secondary)] text-lg leading-relaxed">
+                <div className="space-y-4 text-(--text-secondary) text-lg leading-relaxed">
                   <p>
                     Scolx is a SaaS platform built entirely in Rust. Axum
                     handles HTTP routing and authentication on the server;{" "}
-                    <span className="text-[var(--accent-amber)]">Leptos</span>{" "}
+                    <span className="text-(--accent-amber)">Leptos</span>{" "}
                     compiles to WebAssembly for the UI — one language from
                     server to browser, no polyglot hot path.
                   </p>
@@ -56,7 +55,7 @@ export default function ScolxSection() {
                   href="https://scolx.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-[var(--accent-amber)] hover:text-[var(--text-primary)] transition-colors font-medium"
+                  className="mt-6 inline-flex items-center gap-2 text-(--accent-amber) hover:text-(--text-primary) transition-colors font-medium"
                 >
                   <span>scolx.com</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,10 +66,10 @@ export default function ScolxSection() {
 
               {/* Stack list */}
               <div className="md:w-2/5">
-                <h4 className="font-tech text-xs tracking-widest uppercase text-[var(--text-muted)] mb-4">
+                <h4 className="font-tech text-xs tracking-widest uppercase text-(--text-muted) mb-4">
                   Stack
                 </h4>
-                <div className="space-y-0">
+                <div>
                   {[
                     { name: "Rust", desc: "Primary language" },
                     { name: "Axum", desc: "HTTP layer" },
@@ -80,12 +79,12 @@ export default function ScolxSection() {
                   ].map((item) => (
                     <div
                       key={item.name}
-                      className="flex items-center justify-between py-3 border-b border-[var(--border-subtle)] last:border-0"
+                      className="flex items-center justify-between py-3 border-b border-(--border-subtle) last:border-0"
                     >
-                      <span className="font-medium text-[var(--accent-amber)]">
+                      <span className="font-medium text-(--accent-amber)">
                         {item.name}
                       </span>
-                      <span className="text-sm text-[var(--text-muted)]">
+                      <span className="text-sm text-(--text-muted)">
                         {item.desc}
                       </span>
                     </div>
