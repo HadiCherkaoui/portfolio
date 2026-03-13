@@ -83,7 +83,7 @@ export default function InfraSection() {
               Homelab Documentation
             </a>
             <a
-              href="https://gitlab.cherkaoui.ch/HadiCherkaoui"
+              href="https://gitlab.cherkaoui.ch/HadiCherkaoui/homelab-k8s-fluxcd"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card px-5 py-2.5 inline-flex items-center gap-2 hover-lift text-[var(--text-secondary)] hover:text-[var(--accent-amber)] transition-colors"

@@ -39,9 +39,9 @@ export default function CompetitionSection() {
                 <h3 className="text-2xl font-semibold mb-4 text-[var(--text-primary)]">
                   ICT Championships Switzerland
                 </h3>
-                <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
+                <p className="text-(--text-secondary) text-lg leading-relaxed">
                   I&apos;m competing in the ICT Championships Switzerland in
-                  the Cloud and Cybersecurity track — a national-level
+                  the Cloud and Cybersecurity track — a regional-level
                   technical competition that covers infrastructure, cloud
                   platforms, and offensive security under pressure.
                 </p>
@@ -49,7 +49,7 @@ export default function CompetitionSection() {
               <div className="flex flex-col gap-4 md:min-w-[140px] shrink-0">
                 {[
                   { label: "Track", value: "Cloud & Cyber" },
-                  { label: "Level", value: "National" },
+                  { label: "Level", value: "Regional" },
                   { label: "Country", value: "Switzerland" },
                 ].map((item) => (
                   <div key={item.label} className="md:text-right">
