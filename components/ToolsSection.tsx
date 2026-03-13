@@ -9,8 +9,8 @@ export default function ToolsSection() {
           {/* Claim header */}
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-[var(--accent-amber)]" />
-              <span className="font-tech text-[var(--accent-amber)] text-xs tracking-widest uppercase">
+              <div className="h-px w-12 bg-(--accent-amber)" />
+              <span className="font-tech text-(--accent-amber) text-xs tracking-widest uppercase">
                 Tools
               </span>
             </div>
@@ -24,10 +24,10 @@ export default function ToolsSection() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Arch Linux */}
             <div className="glass-card p-6 hover-lift">
-              <h3 className="text-xl font-semibold mb-4 text-[var(--text-primary)]">
+              <h3 className="text-xl font-semibold mb-4 text-(--text-primary)">
                 Arch Linux
               </h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-(--text-secondary) leading-relaxed">
                 I daily-drive Arch Linux — not for the aesthetic, but because I
                 got tired of not understanding what my OS was doing. Rolling
                 releases, KDE Plasma with Kvantum theming, and shell scripts for
@@ -37,7 +37,7 @@ export default function ToolsSection() {
                 href="https://docs.cherkaoui.ch/setup/os-setup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1 text-sm text-[var(--accent-amber)] hover:text-[var(--text-primary)] transition-colors"
+                className="mt-5 inline-flex items-center gap-1 text-sm text-(--accent-amber) hover:text-(--text-primary) transition-colors"
               >
                 Setup documentation
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,22 +46,23 @@ export default function ToolsSection() {
               </a>
             </div>
 
-            {/* Go & TypeScript */}
+            {/* Go, TypeScript & AI */}
             <div className="glass-card p-6 hover-lift">
-              <h3 className="text-xl font-semibold mb-4 text-[var(--text-primary)]">
-                Go & TypeScript
+              <h3 className="text-xl font-semibold mb-4 text-(--text-primary)">
+                Go, TypeScript & AI
               </h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-(--text-secondary) leading-relaxed">
                 I write Go when Rust is overkill: tooling, scripts, things that
                 need to compile fast and get out of the way. I know TypeScript
                 and React — but I reach for Leptos when the project shares a
-                codebase with the server.
+                codebase with the server. I&apos;m also exploring AI/ML tooling
+                and building with LLM APIs.
               </p>
               <a
                 href="https://github.com/HadiCherkaoui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1 text-sm text-[var(--accent-amber)] hover:text-[var(--text-primary)] transition-colors"
+                className="mt-5 inline-flex items-center gap-1 text-sm text-(--accent-amber) hover:text-(--text-primary) transition-colors"
               >
                 GitHub
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
