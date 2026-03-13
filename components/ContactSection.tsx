@@ -215,7 +215,7 @@ export default function ContactSection() {
               <h3 className="font-headline text-xl mb-6 text-[var(--text-primary)]">
                 Find me here
               </h3>
-              <div className="space-y-0">
+              <div>
                 {[
                   {
                     label: "GitHub",
@@ -288,28 +288,5 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-function SocialLink({
-  href,
-  label,
-  icon,
-}: {
-  href: string;
-  label: string;
-  icon: React.ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-3 px-4 py-3 bg-[var(--darker-bg)] rounded-lg hover:bg-[var(--accent-emerald-subtle)] hover:text-[var(--accent-emerald)] transition-all duration-500 text-[var(--text-secondary)]"
-      style={{ transitionTimingFunction: "var(--ease-signature)" }}
-    >
-      {icon}
-      <span>{label}</span>
-    </a>
   );
 }
