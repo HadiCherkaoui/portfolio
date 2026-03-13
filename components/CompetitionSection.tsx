@@ -14,7 +14,7 @@ export default function CompetitionSection() {
           {/* Claim header — purple for competition/security theme */}
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-[var(--accent-purple)]" />
+              <div className="h-px w-12 bg-(--accent-purple)" />
               <span
                 className="font-tech text-xs tracking-widest uppercase"
                 style={{ color: "var(--accent-purple)" }}
@@ -36,7 +36,7 @@ export default function CompetitionSection() {
           >
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-1">
-                <h3 className="text-2xl font-semibold mb-4 text-[var(--text-primary)]">
+                <h3 className="text-2xl font-semibold mb-4 text-(--text-primary)">
                   ICT Championships Switzerland
                 </h3>
                 <p className="text-(--text-secondary) text-lg leading-relaxed">
@@ -46,14 +46,14 @@ export default function CompetitionSection() {
                   platforms, and offensive security under pressure.
                 </p>
               </div>
-              <div className="flex flex-col gap-4 md:min-w-[140px] shrink-0">
+              <div className="flex flex-col gap-4 md:min-w-35 shrink-0">
                 {[
                   { label: "Track", value: "Cloud & Cyber" },
                   { label: "Level", value: "Regional" },
                   { label: "Country", value: "Switzerland" },
                 ].map((item) => (
                   <div key={item.label} className="md:text-right">
-                    <div className="font-tech text-xs tracking-wider uppercase text-[var(--text-muted)] mb-1">
+                    <div className="font-tech text-xs tracking-wider uppercase text-(--text-muted) mb-1">
                       {item.label}
                     </div>
                     <div
