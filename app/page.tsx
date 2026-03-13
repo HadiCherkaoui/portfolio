@@ -5,7 +5,6 @@ import ToolsSection from "@/components/ToolsSection";
 import CompetitionSection from "@/components/CompetitionSection";
 import OffenseSection from "@/components/OffenseSection";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <CompetitionSection />
       <OffenseSection />
       <ContactSection />
-      <Footer />
     </main>
   );
 }
