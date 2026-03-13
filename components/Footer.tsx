@@ -16,6 +16,7 @@ export default function Footer() {
                 href="https://github.com/HadiCherkaoui"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors"
               >
                 <svg
@@ -30,6 +31,7 @@ export default function Footer() {
                 href="https://gitlab.cherkaoui.ch/HadiCherkaoui"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitLab"
                 className="text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors"
               >
                 <svg
@@ -44,6 +46,7 @@ export default function Footer() {
                 href="https://cherkaoui.ch"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="PC Services"
                 className="text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors"
               >
                 <svg
@@ -64,6 +67,7 @@ export default function Footer() {
                 href="https://docs.cherkaoui.ch"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Documentation"
                 className="text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors"
               >
                 <svg
