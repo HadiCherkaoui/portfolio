@@ -24,8 +24,18 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Hadi Cherkaoui | Platform Developer",
-  description: "Platform Developer apprentice based in Switzerland, passionate about technology and open source. Specializing in Kubernetes, automation, and cloud-native technologies.",
-  keywords: ["Hadi Cherkaoui", "Platform Developer", "Cloud Engineer", "Kubernetes", "Open Source", "Switzerland", "k0s"],
+  description:
+    "Platform Developer apprentice based in Switzerland. Building in Rust and Go, running k0s on bare metal, and competing in ICT Championships Switzerland.",
+  keywords: [
+    "Hadi Cherkaoui",
+    "Platform Developer",
+    "Rust",
+    "Go",
+    "Kubernetes",
+    "Open Source",
+    "Switzerland",
+    "k0s",
+  ],
   authors: [{ name: "Hadi Cherkaoui" }],
 };
 
@@ -37,18 +47,19 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth dark">
       <body
-        className={`${inter.variable} ${newsreader.variable} ${spaceGrotesk.variable} antialiased bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-[var(--accent-emerald-subtle)] selection:text-[var(--text-primary)]`}
+        className={`${inter.variable} ${newsreader.variable} ${spaceGrotesk.variable} antialiased bg-(--bg-primary) text-(--text-primary) selection:bg-(--accent-amber-subtle) selection:text-(--text-primary)`}
       >
-        {/* Background blobs */}
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="blob blob-3" />
-        
-        {/* Subtle grid pattern */}
-        <div className="fixed inset-0 z-[-1] bg-[var(--bg-primary)]">
+        {/* Aurora animated background */}
+        <div className="aurora-bg">
+          <div className="aurora-amber" />
+          <div className="aurora-purple" />
+        </div>
+
+        {/* Subtle grid pattern — no background fill; body provides the dark bg, aurora shows through */}
+        <div className="fixed inset-0 z-[-1]">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black,transparent)]" />
         </div>
-        
+
         {children}
         <Footer />
       </body>

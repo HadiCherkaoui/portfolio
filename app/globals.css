@@ -448,3 +448,51 @@ section {
 .timeline-item:last-child {
   border-left-color: transparent;
 }
+
+/* Aurora background */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-amber {
+  position: absolute;
+  top: -10%;
+  left: -15%;
+  width: 70vw;
+  height: 65vh;
+  background: radial-gradient(ellipse at center, rgba(232, 133, 42, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+.aurora-purple {
+  position: absolute;
+  bottom: -15%;
+  right: -10%;
+  width: 75vw;
+  height: 70vh;
+  background: radial-gradient(ellipse at center, rgba(167, 139, 250, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .aurora-amber {
+    animation: aurora-drift-1 30s ease-in-out infinite alternate;
+  }
+  .aurora-purple {
+    animation: aurora-drift-2 38s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes aurora-drift-1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(12vw, 18vh) scale(1.15); }
+}
+
+@keyframes aurora-drift-2 {
+  from { transform: translate(0, 0) scale(1.1); }
+  to   { transform: translate(-10vw, -12vh) scale(0.92); }
+}
