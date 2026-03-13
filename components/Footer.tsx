@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <footer className="py-12 px-4 relative overflow-hidden border-t border-[var(--border-subtle)]">
@@ -11,8 +9,7 @@ export default function Footer() {
               Hadi Cherkaoui
             </h3>
             <p className="text-[var(--text-muted)] mb-4">
-              Platform Developer Apprentice based in Switzerland, passionate
-              about Kubernetes, automation, and open-source technologies.
+              Platform Developer · Zurich · Building in Rust and Go · k0s on bare metal.
             </p>
             <div className="flex space-x-4">
               <a
@@ -83,6 +80,28 @@ export default function Footer() {
                   />
                 </svg>
               </a>
+              {/* TryHackMe */}
+              <a
+                href="https://tryhackme.com/p/HadiCherkaoui"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TryHackMe"
+                className="text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 512 512">
+                  <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 80c30.9 0 56 25.1 56 56s-25.1 56-56 56-56-25.1-56-56 25.1-56 56-56zm80 304H176c-8.8 0-16-7.2-16-16v-16c0-44.2 35.8-80 80-80h32c44.2 0 80 35.8 80 80v16c0 8.8-7.2 16-16 16z"/>
+                </svg>
+              </a>
+              {/* Scolx */}
+              <a
+                href="https://scolx.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Scolx"
+                className="text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors font-tech text-xs tracking-wider"
+              >
+                Scolx
+              </a>
             </div>
           </div>
 
@@ -94,13 +113,11 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "Home", href: "#hero" },
-                { label: "About", href: "#about" },
-                { label: "Skills", href: "#skills" },
-                { label: "Projects", href: "#projects" },
-                { label: "Daily Driver", href: "#daily-driver" },
-                { label: "Hobbies", href: "#hobbies" },
-                { label: "Automation", href: "#automation" },
-                { label: "Services", href: "#services" },
+                { label: "Scolx", href: "#scolx" },
+                { label: "Infrastructure", href: "#infrastructure" },
+                { label: "Tools", href: "#tools" },
+                { label: "Competition", href: "#competition" },
+                { label: "Security", href: "#offense" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.label}>
@@ -121,11 +138,10 @@ export default function Footer() {
               Contact
             </h3>
             <p className="text-[var(--text-muted)] mb-4">
-              Feel free to reach out if you have any questions or would like to
-              work together on a project.
+              Reach out for Rust, infrastructure, or collaboration.
             </p>
             <a
-              href="mailto:contact@hide.cherkaoui.ch"
+              href="mailto:contact@hadi.cherkaoui.ch"
               className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors"
             >
               <svg
@@ -135,7 +151,7 @@ export default function Footer() {
               >
                 <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
               </svg>
-              contact@hide.cherkaoui.ch
+              contact@hadi.cherkaoui.ch
             </a>
           </div>
         </div>
