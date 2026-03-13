@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function HeroSection() {
   return (
     <section
@@ -7,19 +5,6 @@ export default function HeroSection() {
       className="min-h-screen flex flex-col justify-center py-20 px-4 relative overflow-hidden"
     >
       <div className="container mx-auto max-w-4xl relative z-10">
-        {/* Photo */}
-        <div className="mb-8">
-          <Image
-            src="/thewalk.jpg"
-            alt="Hadi Cherkaoui"
-            width={80}
-            height={80}
-            className="rounded-full object-cover border-2 border-(--accent-amber)"
-            style={{ objectPosition: "top" }}
-            priority
-          />
-        </div>
-
         {/* Role label */}
         <div className="mb-6 flex items-center gap-3">
           <span className="pulse-dot" />

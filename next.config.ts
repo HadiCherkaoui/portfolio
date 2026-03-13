@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
-  // standalone output removed temporarily for worktree dev builds on Windows
+  s
 };
 
 export default nextConfig;
