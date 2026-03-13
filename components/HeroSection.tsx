@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
     <section
@@ -5,10 +7,23 @@ export default function HeroSection() {
       className="min-h-screen flex flex-col justify-center py-20 px-4 relative overflow-hidden"
     >
       <div className="container mx-auto max-w-4xl relative z-10">
+        {/* Photo */}
+        <div className="mb-8">
+          <Image
+            src="/thewalk.jpg"
+            alt="Hadi Cherkaoui"
+            width={80}
+            height={80}
+            className="rounded-full object-cover border-2 border-(--accent-amber)"
+            style={{ objectPosition: "top" }}
+            priority
+          />
+        </div>
+
         {/* Role label */}
         <div className="mb-6 flex items-center gap-3">
           <span className="pulse-dot" />
-          <span className="font-tech text-[var(--accent-amber)] text-sm tracking-widest uppercase">
+          <span className="font-tech text-(--accent-amber) text-sm tracking-widest uppercase">
             Platform Developer · Zurich
           </span>
         </div>
@@ -20,11 +35,11 @@ export default function HeroSection() {
         </h1>
 
         {/* Opening claim */}
-        <p className="text-xl md:text-2xl font-light text-[var(--text-secondary)] max-w-2xl leading-relaxed mb-12">
+        <p className="text-xl md:text-2xl font-light text-(--text-secondary) max-w-2xl leading-relaxed mb-12">
           I write{" "}
-          <span className="text-[var(--accent-amber)] font-medium">Rust</span>
+          <span className="text-(--accent-amber) font-medium">Rust</span>
           . Building Scolx — a full-stack SaaS — while operating the
-          infrastructure it runs on. Platform Developer apprentice, homelab
+          infrastructure it runs on. OSS advocate, AI/ML enthusiast, homelab
           operator, and competing in ICT Championships Switzerland.
         </p>
 
@@ -36,7 +51,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-[var(--text-muted)] hover:text-[var(--accent-amber)] transition-all duration-500"
+            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -49,7 +64,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitLab"
-            className="text-[var(--text-muted)] hover:text-[var(--accent-amber)] transition-all duration-500"
+            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -62,7 +77,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Documentation"
-            className="text-[var(--text-muted)] hover:text-[var(--accent-amber)] transition-all duration-500"
+            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +88,7 @@ export default function HeroSection() {
           <a
             href="mailto:contact@hadi.cherkaoui.ch"
             aria-label="Email"
-            className="text-[var(--text-muted)] hover:text-[var(--accent-amber)] transition-all duration-500"
+            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -86,20 +101,20 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TryHackMe"
-            className="text-[var(--text-muted)] hover:text-[var(--accent-amber)] transition-all duration-500"
+            className="text-(--text-muted) hover:text-(--accent-amber) transition-all duration-500"
             style={{ transitionTimingFunction: "var(--ease-signature)" }}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">
-              <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 80c30.9 0 56 25.1 56 56s-25.1 56-56 56-56-25.1-56-56 25.1-56 56-56zm80 304H176c-8.8 0-16-7.2-16-16v-16c0-44.2 35.8-80 80-80h32c44.2 0 80 35.8 80 80v16c0 8.8-7.2 16-16 16z"/>
+              <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 80c30.9 0 56 25.1 56 56s-25.1 56-56 56-56-25.1-56-56 25.1-56 56-56zm80 304H176c-8.8 0-16-7.2-16-16v-16c0-44.2 35.8-80 80-80h32c44.2 0 80 35.8 80 80v16c0 8.8-7.2 16-16 16z" />
             </svg>
           </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-50">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-50">
         <div
-          className="w-6 h-6 border-r-2 border-b-2 border-[var(--accent-amber)] transform rotate-45 animate-bounce"
+          className="w-6 h-6 border-r-2 border-b-2 border-(--accent-amber) rotate-45 animate-bounce"
           style={{ animationDuration: "2s" }}
         />
       </div>
