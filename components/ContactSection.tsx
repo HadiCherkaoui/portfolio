@@ -119,9 +119,9 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-16 md:items-start">
           {/* Contact form */}
-          <div className="md:w-1/2 order-2 md:order-1">
+          <div className="w-full md:w-1/2 order-2 md:order-1">
             <div
               ref={formRef}
               onMouseMove={formSpotlight.onMouseMove}
@@ -210,7 +210,7 @@ export default function ContactSection() {
           </div>
 
           {/* Contact info */}
-          <div className="md:w-1/2 order-1 md:order-2">
+          <div className="w-full md:w-1/2 order-1 md:order-2">
             <div className="glass-card p-6">
               <h3 className="font-headline text-xl mb-6 text-(--text-primary)">
                 Find me here
