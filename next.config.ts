@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
-  // This enables Docker compatibility for standalone output
+  // standalone output removed temporarily for worktree dev builds on Windows
 };
 
 export default nextConfig;
