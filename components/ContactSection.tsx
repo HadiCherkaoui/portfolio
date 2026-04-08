@@ -247,11 +247,6 @@ export default function ContactSection() {
                     value: "contact@hadi.cherkaoui.ch",
                     href: "mailto:contact@hadi.cherkaoui.ch",
                   },
-                  {
-                    label: "Services",
-                    value: "PC & Server Services",
-                    href: "https://cherkaoui.ch",
-                  },
                 ].map((item) => (
                   <a
                     key={item.label}

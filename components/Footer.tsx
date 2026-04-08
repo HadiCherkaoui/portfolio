@@ -35,17 +35,6 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://cherkaoui.ch"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="PC Services"
-                className="text-(--text-muted) hover:text-[var(--accent-emerald)] transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2v-2M3 4h6l4 4v8a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
-                </svg>
-              </a>
-              <a
                 href="https://docs.cherkaoui.ch"
                 target="_blank"
                 rel="noopener noreferrer"
