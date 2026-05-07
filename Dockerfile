@@ -14,8 +14,8 @@ FROM base AS builder
 ARG DISCORD_WEBHOOK_URL
 ENV NEXT_PUBLIC_DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
 
-# Copy package files
-COPY package.json pnpm-lock.yaml ./
+# Copy package files (pnpm-workspace.yaml carries the allowBuilds list pnpm 11 needs)
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile
