@@ -57,15 +57,15 @@ export default function Footer() {
                   <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 80c30.9 0 56 25.1 56 56s-25.1 56-56 56-56-25.1-56-56 25.1-56 56-56zm80 304H176c-8.8 0-16-7.2-16-16v-16c0-44.2 35.8-80 80-80h32c44.2 0 80 35.8 80 80v16c0 8.8-7.2 16-16 16z" />
                 </svg>
               </a>
-              {/* Scolx */}
+              {/* Anvil */}
               <a
-                href="https://scolx.com"
+                href="https://gitlab.cherkaoui.ch/HadiCherkaoui/anvil"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Scolx"
+                aria-label="Anvil"
                 className="text-(--text-muted) hover:text-[var(--accent-emerald)] transition-colors font-tech text-xs tracking-wider"
               >
-                Scolx
+                Anvil
               </a>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "Home", href: "#hero" },
-                { label: "Scolx", href: "#scolx" },
+                { label: "Anvil", href: "#anvil" },
                 { label: "Lockbox", href: "#lockbox" },
                 { label: "Infrastructure", href: "#infrastructure" },
                 { label: "Tools", href: "#tools" },

@@ -3,11 +3,11 @@
 import SectionWrapper from "./SectionWrapper";
 import useSpotlight from "../hooks/useSpotlight";
 
-export default function ScolxSection() {
+export default function AnvilSection() {
   const { ref, spotlightProps } = useSpotlight<HTMLDivElement>();
 
   return (
-    <SectionWrapper id="scolx">
+    <SectionWrapper id="anvil">
       <div className="py-24 px-4 relative">
         <div className="container mx-auto max-w-4xl relative z-10">
 
@@ -20,7 +20,7 @@ export default function ScolxSection() {
               </span>
             </div>
             <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl tracking-tight">
-              I build full-stack{" "}
+              I build Kubernetes-native{" "}
               <span className="amber-accent">in Rust.</span>
             </h2>
           </div>
@@ -35,29 +35,36 @@ export default function ScolxSection() {
               {/* Description */}
               <div className="md:w-3/5">
                 <h3 className="text-2xl font-semibold mb-4 text-(--text-primary)">
-                  Scolx
+                  Anvil
                 </h3>
                 <div className="space-y-4 text-(--text-secondary) text-lg leading-relaxed">
                   <p>
-                    Scolx is a SaaS platform built entirely in Rust. Axum
-                    handles HTTP routing and authentication on the server;{" "}
-                    <span className="text-(--accent-amber)">Leptos</span>{" "}
-                    compiles to WebAssembly for the UI — one language from
-                    server to browser, no polyglot hot path.
+                    Existing panels (Crafty, Pterodactyl) treat Kubernetes as
+                    an afterthought — they assume Docker on a single host.
+                    Anvil flips it: the cluster is the runtime, and a
+                    Minecraft server is just a shape of{" "}
+                    <span className="text-(--accent-amber)">StatefulSet + PVC + Service</span>.
+                    Scale-to-zero is <code className="font-tech text-(--accent-amber)">replicas: 0</code>;
+                    per-server PVCs are free.
                   </p>
                   <p>
-                    It runs on a k0s cluster I built and operate myself.
-                    PostgreSQL for storage. The deployment pipeline is fully
-                    automated through FluxCD and a self-hosted GitLab instance.
+                    One Axum binary drives it via{" "}
+                    <span className="text-(--accent-amber)">kube-rs</span>{" "}
+                    typed APIs — no CRDs, no controller, no reconciliation
+                    loop. The Next.js frontend ships as a static export
+                    embedded with <span className="text-(--accent-amber)">rust-embed</span>:
+                    one distroless image, ~30 MB, no Node runtime in
+                    production. Runs on the k0s cluster I operate myself.
+                    AGPL, v1.0.0.
                   </p>
                 </div>
                 <a
-                  href="https://scolx.com"
+                  href="https://gitlab.cherkaoui.ch/HadiCherkaoui/anvil"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center gap-2 text-(--accent-amber) hover:text-[var(--text-primary)] transition-colors font-medium"
                 >
-                  <span>scolx.com</span>
+                  <span>gitlab.cherkaoui.ch/HadiCherkaoui/anvil</span>
                   <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -73,8 +80,8 @@ export default function ScolxSection() {
                   {[
                     { name: "Rust", desc: "Primary language" },
                     { name: "Axum", desc: "HTTP layer" },
-                    { name: "Leptos", desc: "UI / WebAssembly" },
-                    { name: "PostgreSQL", desc: "Storage" },
+                    { name: "kube-rs", desc: "Typed k8s API" },
+                    { name: "SQLite", desc: "Metadata + audit" },
                     { name: "k0s", desc: "Production cluster" },
                   ].map((item) => (
                     <div

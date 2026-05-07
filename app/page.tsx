@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-import ScolxSection from "@/components/ScolxSection";
+import AnvilSection from "@/components/AnvilSection";
 import LockboxSection from "@/components/LockboxSection";
 import InfraSection from "@/components/InfraSection";
 import ToolsSection from "@/components/ToolsSection";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <ScolxSection />
+      <AnvilSection />
       <LockboxSection />
       <InfraSection />
       <ToolsSection />

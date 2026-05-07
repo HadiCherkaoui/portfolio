@@ -23,9 +23,9 @@ export default function HeroSection() {
         <p className="text-xl md:text-2xl font-light text-(--text-secondary) max-w-2xl leading-relaxed mb-12">
           I write{" "}
           <span className="text-(--accent-amber) font-medium">Rust</span>
-          . Building Scolx — a full-stack SaaS — while operating the
-          infrastructure it runs on. OSS advocate, AI/ML enthusiast, homelab
-          operator, and competing in ICT Championships Switzerland.
+          . Building Anvil — a Kubernetes-native Minecraft panel — on the
+          k0s cluster I operate myself. OSS advocate, AI/ML enthusiast,
+          homelab operator, and competing in ICT Championships Switzerland.
         </p>
 
         {/* Social links */}
